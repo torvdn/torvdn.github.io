@@ -39,7 +39,7 @@ ga('send', 'pageview');
             </nav>
           </div>
 
-<iframe src="http://doramy.club/" width="100%" height="900" frameborder="0" allowfullscreen></iframe>
+<iframe src="//doramy.club/" width="100%" height="900" frameborder="0" allowfullscreen></iframe>
 
 <center><p style="text-align: center;"><table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;">
 <p style="text-align: center;"><a href="/index/0-13" target="_parent" title="Обратная связь"><strong><span style="color:#ffff00;"><span style="font-size:28px;">Обратная связь</span></span></strong></a></p>
