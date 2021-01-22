@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -20,33 +19,31 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	
- <link rel="stylesheet" href="https://torvdn.github.io/css_js/common.css">
-
- <script src="https://torvdn.github.io/css_js/run.min.js" async></script>
+ <link rel="stylesheet" href="/css_js/common.css?v=0.0.2">
 </head>
 <body>
-
-    <section class="section-top">
-      <div class="container">
-        <header>
-          <a href="/" class="logo">
-            <span class="logo-title">AGGREGATOR</span>
-            <h1 class="logo-blockquote">Поиск. Найди Своё Кино!</h1>
-          </a>
-          <nav class="nav" id="navbar">
-            <a href="/webmaster" class="nav-item">ВЕБМАСТЕРУ</a>
-            <a href="/contact" class="nav-item">Контакты</a>
-          </nav>
-        </header>
-           <p>&nbsp;</p>
-       <div>
+<main>
+ <main>
+ <section class="section-top">
+ <div class="container">
+ <header>
+ <a href="/4k/" class="logo">
+ <span class="logo-title">AGGREGATOR.4k</span>
+ <h1 class="logo-blockquote">Поиск. Найди Своё Кино!</h1>
+ </a>
+ <nav class="nav" id="navbar">
+ <a href="/webmaster" class="nav-item">ВЕБМАСТЕРУ</a>
+ <a href="/contact" class="nav-item">Контакты</a>
+ </nav>
+ </header>
+<p>&nbsp;</p>
+	 <p style="text-align: center;"><img alt="" src="https://torvdn.github.io/4k/4k.jpg" style="width: 502px; height: 100px;" /></p>
+<div>
 <center>
 
 <div class="index-background"></div>
 
 <div class="search-line">
-    <div id="kin-x" data-empty-player="/995424.jpg" data-kinopoisk="202125689999999"></div>
     <div id="yohoho" data-player="bazon,videocdn,collaps,hdvb,iframe,alloha,ustore,pleer,videospider,kodik,trailer,torrent" data-bazon="fd96dcfe0417aa1f2d99b595658afbf4" data-videocdn="NQTJzau1aumGng3v6Mx4IDjQI6IdrOo1" data-hdvb="8a22f8e7684404c3815e3ffa940f00a0:torvdn.github.io" data-kodik="a86ae0a2a3430b4daae6b1125acf29d3" data-tv="1" data-resize="1">
         <div class="brand"></p>
 </div>
@@ -154,8 +151,8 @@
                     var exec = /(film\/|movie\/).*?([0-9]{3,7})\//gi.exec(title.value);
                     if (exec && exec[2]) {
                         yohoho.dataset.kinopoisk = exec[2];
-                        if (window.location.hostname === 'torvdn.github.io') {
-                            window.location.href = 'https://torvdn.github.io/' + yohoho.dataset.kinopoisk;
+                        if (window.location.hostname === 'yohoho.cc') {
+                            window.location.href = 'https://torvdn.github.io/4k/#' + yohoho.dataset.kinopoisk;
                             return;
                         }
                         window.location.hash = '#' + yohoho.dataset.kinopoisk;
@@ -163,16 +160,16 @@
                     }
                 } else if (/^\d+$/.test(title.value)) {
                     yohoho.dataset.kinopoisk = title.value;
-                    if (window.location.hostname === 'torvdn.github.io') {
-                        window.location.href = 'https://torvdn.github.io/' + yohoho.dataset.kinopoisk;
+                    if (window.location.hostname === 'yohoho.cc') {
+                        window.location.href = 'https://torvdn.github.io/4k/#' + yohoho.dataset.kinopoisk;
                         return;
                     }
                     window.location.hash = '#' + yohoho.dataset.kinopoisk;
                     document.title = 'КиноПоиск: ' + yohoho.dataset.kinopoisk;
                 } else {
                     yohoho.dataset.title = encodeURIComponent(title.value);
-                    if (window.location.hostname === 'torvdn.github.io') {
-                        window.location.href = 'https://torvdn.github.io/' + yohoho.dataset.title;
+                    if (window.location.hostname === 'yohoho.cc') {
+                        window.location.href = 'https://torvdn.github.io/4k/#' + yohoho.dataset.title;
                         return;
                     }
                     window.location.hash = '#' + yohoho.dataset.title;
@@ -184,7 +181,7 @@
         }
     });
 </script>
-	
+
 <section class="bg-secondary">
  <div class="container">
  <div class="tabs">
@@ -196,7 +193,7 @@
 			<td style="text-align: center;">
 			<p><span style="font-size:24px;">Приветствуем вас на сайт &quot;<a href="https://kodik.at.ua/" target="_blank">AGGREGATOR</a>&quot; !!!!</span></p>
 
-			<p><span style="font-size:24px;">ЗЕРКАЛА:&nbsp;<a href="https://torvdn.github.io/4k/" target="_blank">torvdn.github.io/4k</a>&nbsp;/&nbsp;<a href="http://kinoglobus.at.ua/" target="_blank">kinoglobus.at.ua</a><br />
+			<p><span style="font-size:24px;">ЗЕРКАЛА:&nbsp;<a href="https://torvdn.github.io/" target="_blank">torvdn.github.io</a>&nbsp;/&nbsp;<a href="http://kinoglobus.at.ua/" target="_blank">kinoglobus.at.ua</a><br />
 			AGGREGATOR - это сайт-агрегатор всех открытых и закрытых видео-хостингов.<br />
 			Посмотреть онлайн фильм или сериал сейчас на сайте.&nbsp;<br />
 			Для этого Вы можете ввести &quot;Название фильма / ID КиноПоиск&quot;&nbsp;<br />
@@ -230,8 +227,59 @@
   </main>
 </main>
 
-     <center>
-	     <!-- Yandex.Metrika counter -->
+ <script> 
+ document.oncontextmenu = function() { 
+ return false; 
+ }; 
+ document.onkeydown = function(e) { 
+ if (e.keyCode == 123) { 
+ return false; 
+ } 
+ if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { 
+ return false; 
+ } 
+ if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { 
+ return false; 
+ } 
+ if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { 
+ return false; 
+ } 
+
+ if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { 
+ return false; 
+ } 
+ } 
+</script>
+
+<center>
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3199740", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="https://top-fwz1.mail.ru/counter?id=3199740;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+
+<!--LiveInternet counter--><a href="//www.liveinternet.ru/click"
+target="_blank"><img id="licnt978C" width="88" height="15" style="border:0" 
+title="LiveInternet: показано число посетителей за сегодня"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licnt978C").src=
+"//counter.yadro.ru/hit?t26.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+	
+ <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -271,64 +319,13 @@ Cd.write("<img src='//c.hit.ua/hit?i=39011&g=0&x=1"+Cp+Cr+
 <img src='//c.hit.ua/hit?i=39011&amp;g=0&amp;x=1' border='0' width='88' height='31' alt='hit.ua: сейчас на сайте, посетителей и просмотров за сегодня' title='hit.ua: сейчас на сайте, посетителей и просмотров за сегодня'/>
 </noscript></a>
 <!-- / hit.ua -->
-	     
-<!--LiveInternet counter--><a href="//www.liveinternet.ru/click"
-target="_blank"><img id="licnt978C" width="88" height="15" style="border:0" 
-title="LiveInternet: показано число посетителей за сегодня"
-src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
-alt=""/></a><script>(function(d,s){d.getElementById("licnt978C").src=
-"//counter.yadro.ru/hit?t26.6;r"+escape(d.referrer)+
-((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
-(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
-";h"+escape(d.title.substring(0,150))+";"+Math.random()})
-(document,screen)</script><!--/LiveInternet-->
-	     
-<!-- Rating Mail.ru counter -->
-<script type="text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3199740", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = "https://top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="https://top-fwz1.mail.ru/counter?id=3199740;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
-</div></noscript>
-<!-- //Rating Mail.ru counter -->
 <!-- Be1.ru --><a href="https://be1.ru/stat/torvdn.github.io" title="Анализ сайта" target="_blank"><img src="https://be1.ru/images/analiz-sayta.jpg" width="88" height="31" alt="Анализ сайта" title="Анализ сайта"/></a><!-- Be1.ru -->
 </center>
-   
-   <script> 
- document.oncontextmenu = function() { 
- return false; 
- }; 
- document.onkeydown = function(e) { 
- if (e.keyCode == 123) { 
- return false; 
- } 
- if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { 
- return false; 
- } 
- if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { 
- return false; 
- } 
- if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { 
- return false; 
- } 
-
- if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { 
- return false; 
- } 
- } 
-</script>
-	 
+	
 <!-- uSocial -->
 <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
 <div class="uSocial-Share" data-pid="e111dfc3d84148ac7f58fdc4ca245c7b" data-type="share" data-options="round-rect,style1,default,left,slide-up,size48,eachCounter0,counter0,upArrow-right" data-social="vk,fb,ok,twi,telegram,mail,vi,wa,lin,pinterest,lj,tumblr,bookmarks,spoiler,print,email"></div>
 <!-- /uSocial -->
-    
+ 
 </body>
 </html>
