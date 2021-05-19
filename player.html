@@ -7,156 +7,31 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
  <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/7fc7021634c9733009b23eb6e605bcf22ce97ebf/css/cover.css'/>
  <title>AGGREGATOR - ПЛЕЕР</title>
-
+ <script src="/css_js/main.min.js" async></script>
+ <script src="/css_js/run.min.js" async></script>
 </head>
 <body>
- <div>
+<div>
  <a class="my-0 mr-md-auto navbar-brand masthead-brand" href="//kingpoisk.github.io" target="_blank">AGGREGATOR - Player</a>
  <nav class="my-2 my-md-0 mr-md-3 nav nav-masthead justify-content-center">
 <div>
-<div class="index-background"></div>
 
-<div class="search-line">
-    <div id="yohoho" data-player="bazon,hdvb,videocdn,collaps,alloha,ustore,kodik,trailer,torrent" data-bazon="fd96dcfe0417aa1f2d99b595658afbf4" data-videocdn="NQTJzau1aumGng3v6Mx4IDjQI6IdrOo1" data-hdvb="8a22f8e7684404c3815e3ffa940f00a0:kingpoisk.github.io" data-kodik="a86ae0a2a3430b4daae6b1125acf29d3" data-ustore="390c0d44a67032bcf8e9f3b0b3b90832:kingpoisk.github.io" data-button="bazon: Плеер {N}, videocdn: Плеер {N}, collaps: Плеер {N}, alloha: Плеер {N}, hdvb: Плеер {N}, ustore: Плеер {N}, kodik: Плеер {N}, trailer: Плеер {N}, torrent: Плеер {N}" data-tv="1" data-resize="1">
-        <div class="brand"></p>
-	<div id="kin-x" data-height="480" data-empty-player="/995424.jpg" data-kinopoisk="202125689999999"></div>
-</div>
-       <div class="form form-inline">
-            <input type="text" class="form-control" placeholder="Название фильма / ID kinopoisk.ru/film/666" id="search-title" name="title">
-            <input type="button" id="search" class="btn btn-primary" value="Найти">
-        </div>
-    </div>
-</div>
- <script src="/css_js/main.min.js" async></script>
- <script src="/css_js/run.min.js" async></script>
-<script src="/css_js/yo.js"></script>
-
- <div class="index-seo">
-
+<div>
+ <div class="aspect aspect-16by9">
+ <div class="preview aspect-item">
+ <div id="kin-x" data-empty-player="https://kingpoisk.github.io/995424.jpg" data-kinopoisk="20209777099" data-collaps="0c54da2301073eafd15dcefc417e20e3:kodik.at.ua" data-videocdn="NQTJzau1aumGng3v6Mx4IDjQI6IdrOo1" data-hdvb="8a22f8e7684404c3815e3ffa940f00a0:kinoglobus.at.ua" data-kodik="a86ae0a2a3430b4daae6b1125acf29d3" data-btn-name="collaps: CCDN, videocdn: VCDN, hdvb: HDVB, KDK: kodik.biz, US: TORE, trailer: Трейлер"></div>
  </div>
-	<p>&nbsp;</p>
-	<footer class="footer">
-    <div class="container">
-	    </div>
-        <p class="text-muted">Онлайн и торренты <span id="count">335 201</span> фильмов и сериалов.</p>
-    </div>
-</footer>
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-<script>
-    WebFont.load({
-        google: {
-            families: ['Neucha']
-        }
-    });
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var seo = document.querySelector('.index-seo').innerText;
-        var items = seo.split(' ');
+ </div>
+ <div class="form form-inline">
+ <input type="text" class="form-control" placeholder="Название фильма / ID КиноПоиск" id="search-title"
+ name="title">
+ <input type="button" id="search" class="btn btn-primary" value="Найти">
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        (function flashWord() {
-            var i = 0;
-            function run(item) {
-                var t = setTimeout(function () {
-                    clearTimeout(t);
-                    document.querySelector('.index-seo').innerHTML = seo.replace(new RegExp(' ' + item + ' ', 'g'), ' <span style="color: #fff">' + item + '</span> ');
-                    if (items.length) {
-                        i = getRandom(0, items.length - 1);
-                        run(items[i].replace(/[^A-Za-zА-Яа-яёЁ0-9]/gim, ''));
-                    }
-                }, 100);
-            }
-            function getRandom(min, max) {
-                min = Math.ceil(min);
-                max = Math.floor(max);
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
-            run(items[i]);
-        })();
-
-        (function countMovies() {
-            var date = new Date();
-            var year = date.getUTCFullYear();
-            var month = date.getUTCMonth() + 1;
-            var day = date.getUTCDate();
-            var hours = date.getUTCHours();
-            var minutes = date.getUTCMinutes();
-            var seconds = date.getUTCSeconds();
-            var total = ((year - 2014) * 121680) + (month * 10140) + (day * 338) + (hours * 14) + minutes + seconds;
-            document.querySelector('#count').innerHTML = (total + '').replace(/([0-9]{3})([0-9]{3})/, '$1 $2');
-            setInterval(function () {
-                total += Math.floor(Math.random() * 3);
-                document.querySelector('#count').innerHTML = (total + '').replace(/([0-9]{3})([0-9]{3})/, '$1 $2');
-            }, 1000);
-        })();
-
-        var search = document.querySelector('#search');
-        var title = document.querySelector('#search-title');
-
-        if (window.location.hash) {
-            var hash = window.location.hash.substring(1);
-            if (title && hash) {
-                title.value = decodeURIComponent(hash);
-                parse();
-            }
-        }
-
-        if (search) {
-            search.addEventListener('click', function () {
-                return parse();
-            });
-        }
-
-        if (title) {
-            title.addEventListener('keyup', function (event) {
-                event.preventDefault();
-                if (event.keyCode === 13) {
-                    return parse();
-                }
-            });
-        }
-
-        function parse() {
-            var yohoho = document.querySelector('#yohoho');
-            if (title && title.value && yohoho) {
-                if (/kinopoisk\.ru/i.test(title.value)) {
-                    var exec = /(film\/|movie\/).*?([0-9]{3,7})\//gi.exec(title.value);
-                    if (exec && exec[2]) {
-                        yohoho.dataset.kinopoisk = exec[2];
-                        if (window.location.hostname === 'yohoho.cc') {
-                            window.location.href = 'https://kingpoisk.github.io/#' + yohoho.dataset.kinopoisk;
-                            return;
-                        }
-                        window.location.hash = '#' + yohoho.dataset.kinopoisk;
-                        document.title = 'КиноПоиск: ' + yohoho.dataset.kinopoisk;
-                    }
-                } else if (/^\d+$/.test(title.value)) {
-                    yohoho.dataset.kinopoisk = title.value;
-                    if (window.location.hostname === 'yohoho.cc') {
-                        window.location.href = 'https://kingpoisk.github.io/#' + yohoho.dataset.kinopoisk;
-                        return;
-                    }
-                    window.location.hash = '#' + yohoho.dataset.kinopoisk;
-                    document.title = 'КиноПоиск: ' + yohoho.dataset.kinopoisk;
-                } else {
-                    yohoho.dataset.title = encodeURIComponent(title.value);
-                    if (window.location.hostname === 'yohoho.cc') {
-                        window.location.href = 'https://kingpoisk.github.io/#' + yohoho.dataset.title;
-                        return;
-                    }
-                    window.location.hash = '#' + yohoho.dataset.title;
-                    document.title = title.value;
-                }
-                items = [];
-                return yo();
-            }
-        }
-    });
-</script>
- 
  <center>
 <p style="text-align: center;"><span style="color:#ffffff;"><span style="font-size:20px;">Скопируйте код установите в нужное место на нужный контент укажите id_kp в конце ссылке</span></span></p>
 <p style="text-align: center;"><span style="color:#ffffff;"><span style="font-size:20px;">&quot;Пример:https://kingpoisk.github.io/player#666&quot;</span></span></p>
